@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>App1 - kalkulator</title>
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+</head>
+
+<body>
+    <div class="main-site"><a href="https://zkuba94.github.io/Portfolio-30-08-2022/">Strona Główna</a></div>
+    <div class="container">
+        <div class="calculator">
+            <div class="calculator__top">
+                <span class="output__submit"></span>
+                <span class="output__action"></span>
+                <p class="output__digit">0
+                </p>
+            </div>
+            <div class="calculator__down">
+                <div class="calculator__down__btn clear">C</div>
+                <div class="calculator__down__btn power">x<sup>2</sup>
+                </div>
+                <div class="calculator__down__btn multiply sign">*</div>
+                <div class="calculator__down__btn backspace"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-backspace" width="30" height="30" viewBox="0 0 24 24"
+                        stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M20 6a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-11l-5 -5a1.5 1.5 0 0 1 0 -2l5 -5z"></path>
+                        <path d="M12 10l4 4m0 -4l-4 4"></path>
+                    </svg></div>
+                <div class="calculator__down__btn element">&#8730;</div>
+                <div class="calculator__down__btn divide sign">/</div>
+                <div class="calculator__down__btn minus sign">-</div>
+                <div class="calculator__down__btn number seven">7</div>
+                <div class="calculator__down__btn number eight">8</div>
+                <div class="calculator__down__btn number nine">9</div>
+                <div class="calculator__down__btn plus sign">+</div>
+                <div class="calculator__down__btn number four">4</div>
+                <div class="calculator__down__btn number five">5</div>
+                <div class="calculator__down__btn number six">6</div>
+                <div class="calculator__down__btn number one">1</div>
+                <div class="calculator__down__btn number two">2</div>
+                <div class="calculator__down__btn number three">3</div>
+                <div class="calculator__down__btn equal">=</div>
+                <div class="calculator__down__btn number zero">0</div>
+                <div class="calculator__down__btn number double-zero">00</div>
+                <div class="calculator__down__btn number dot">.</div>
+            </div>
+        </div>
+        <div class="history">
+            <p class="history__title">Last calculations:</p>
+            <ul class="history__list">
+            </ul>
+            <button class="history__btn-clear"><svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-refresh" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"></path>
+                    <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
+                </svg></button>
+        </div>
+    </div>
+
+    <script type="module" src="./dist/js/main.min.js"></script>
+</body>
+
+</html>

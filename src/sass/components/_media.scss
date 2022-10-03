@@ -1,0 +1,26 @@
+@media (max-width: 500px) {
+	.container {
+		flex-direction: column;
+		min-width: 330px;
+		padding: 2rem;
+
+		.calculator {
+			width: 100%;
+			margin: 0;
+
+			&__top {
+				min-height: 12rem;
+			}
+			&__down {
+				min-height: 25rem;
+			}
+		}
+		.history {
+			margin-top: 6px;
+			margin-left: 0;
+			padding: 1rem;
+			width: 100%;
+			min-height: 12rem;
+		}
+	}
+}
