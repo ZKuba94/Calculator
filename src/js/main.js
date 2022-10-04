@@ -296,31 +296,28 @@ const checkSize = () => {
 const clearList = () => {
 	lastsList.innerHTML = '';
 };
-
 const keyPress = e => {
 	if (calculate.length <= 16) {
 		if (e.key == '+' && !bottomRow.textContent == '0') {
 			middleRow.textContent = '+';
 			topRow.textContent = bottomRow.textContent;
 			calculate = [];
-		}
-		if (e.key == '-' && !bottomRow.textContent == '0') {
+		} else if (e.key == '-' && !bottomRow.textContent == '0') {
 			middleRow.textContent = '-';
 			topRow.textContent = bottomRow.textContent;
 			calculate = [];
-		}
-		if (e.key == '*' && !bottomRow.textContent == '0') {
+		} else if (e.key == '*' && !bottomRow.textContent == '0') {
 			middleRow.textContent = '*';
 			topRow.textContent = bottomRow.textContent;
 			calculate = [];
-		}
-		if (e.key == '/' && !bottomRow.textContent == '0') {
+		} else if (e.key == '/' && !bottomRow.textContent == '0') {
 			middleRow.textContent = '/';
 			topRow.textContent = bottomRow.textContent;
 			calculate = [];
-		}
-		if ((e.key == '=' || e.key == 'Enter') && !bottomRow.textContent == '0') {
+		} else if ((e.key == '=' || e.key == 'Enter') && !bottomRow.textContent == '0') {
 			chooseAction();
+		} else if (e.key == 'Backspace') {
+			deleteOneFunction();
 		}
 
 		// digits and dot below --------------------------------------------------------
@@ -372,4 +369,4 @@ digits.forEach(digit => digit.addEventListener('click', typeDigit));
 signs.forEach(sign => sign.addEventListener('click', checkSign));
 digits.forEach(digit => digit.addEventListener('click', checkSize));
 clearListBtn.addEventListener('click', clearList);
-document.addEventListener('keypress', keyPress);
+document.addEventListener('keydown', keyPress);
