@@ -127,15 +127,25 @@ const multiply = () => {
 const divide = () => {
 	let x = Number.parseFloat(topRow.textContent);
 	let y = Number.parseFloat(bottomRow.textContent);
-	score = x / y;
-	calculate = [];
 
-	ulItemStorage = [x, y, score];
-	const ulItem = document.createElement('li');
-	ulItem.classList.add('history__list__item');
-	ulItem.textContent = `${ulItemStorage[0]} / ${ulItemStorage[1]} = ${ulItemStorage[2]}`;
-	lastsList.append(ulItem);
-	ulItemStorage = [];
+	if (y === 0) {
+		calculate = [];
+		ulItemStorage = [x, y, 'error'];
+		const ulItem = document.createElement('li');
+		ulItem.classList.add('history__list__item');
+		ulItem.textContent = `${ulItemStorage[0]} / ${ulItemStorage[1]} = ${ulItemStorage[2]}`;
+		lastsList.append(ulItem);
+		ulItemStorage = [];
+	} else {
+		score = x / y;
+		calculate = [];
+		ulItemStorage = [x, y, score];
+		const ulItem = document.createElement('li');
+		ulItem.classList.add('history__list__item');
+		ulItem.textContent = `${ulItemStorage[0]} / ${ulItemStorage[1]} = ${ulItemStorage[2]}`;
+		lastsList.append(ulItem);
+		ulItemStorage = [];
+	}
 };
 const square = () => {
 	if (topRow.textContent == '') {
@@ -216,10 +226,17 @@ const chooseAction = () => {
 			topRow.textContent = '';
 			middleRow.textContent = '';
 		} else if (middleRow.textContent === '/') {
-			divide();
-			bottomRow.textContent = score;
-			topRow.textContent = '';
-			middleRow.textContent = '';
+			if (bottomRow.textContent === '0') {
+				divide();
+				bottomRow.textContent = 'error';
+				topRow.textContent = '';
+				middleRow.textContent = '';
+			} else {
+				divide();
+				bottomRow.textContent = score;
+				topRow.textContent = '';
+				middleRow.textContent = '';
+			}
 		}
 		checkSize();
 	}
