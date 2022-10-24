@@ -27,12 +27,13 @@ body {
 	position: absolute;
 	top: 25px;
 	left: 25px;
+	background-color: rgba($color: #465362, $alpha: 0.3);
+	border: none;
+	border-radius: 8px;
 	a {
 		display: block;
 		font-size: 2rem;
-		background-color: rgba($color: #465362, $alpha: 0.3);
-		border-radius: 8px;
-		padding: 1.5rem;
+		padding: 1.8rem;
 		text-decoration: none;
 		color: #f4fffd;
 	}
@@ -95,6 +96,7 @@ body {
 			align-items: center;
 			background-color: rgba($color: #465362, $alpha: 0.3);
 			color: #f4fffd;
+			border: none;
 			border-radius: 8px;
 			transition: background 0.2s;
 			cursor: pointer;
